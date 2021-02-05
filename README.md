@@ -6,35 +6,25 @@ This very simple benchmark tested five ways to do this:
 
 ### Scenarios
 ```c#
-public void Scenario1()
-{
+// scenario 1
     var list = Ids?.ToList() ?? new List<Guid>();
     if (list.Any() is false) { }
-}
 
-public void Scenario2()
-{
+// scenario 2
     var list = Ids?.ToArray() ?? Array.Empty<Guid>();
     if (list.Any() is false) { }
-}
 
-public void Scenario3()
-{
+// scenario 3
     var list = Ids?.ToList();
     if (list is null || list.Any() is false) { }
-}
 
-public void Scenario4()
-{
+// scenario 4
     var list = Ids?.ToList();
     if (list is {Count: > 0} is false) { }
-}
 
-public void Scenario5()
-{
+// scenario 5
     var list = Ids?.ToList();
     if (list?.Count <= 0) { }
-}
 ```
 
 ### Result
