@@ -66,7 +66,7 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
 | Scenario3_toArray | .NET Core 5.0 | .NET Core 5.0 |  0.4854 ns | 0.0108 ns | 0.0101 ns |  1.00 |    0.00 |
 |                   |               |               |            |           |           |       |         |
 |  Scenario4_toList | .NET Core 3.1 | .NET Core 3.1 |  0.2452 ns | 0.0024 ns | 0.0022 ns |  1.14 |    0.03 |
-|  Scenario4_toList | .NET Core 5.0 | .NET Core 5.0 |  0.2164 ns | 0.0058 ns | 0.0045 ns |  1.00 |    0.00 |
+|  **Scenario4_toList** | **.NET Core 5.0** | **.NET Core 5.0** |  **0.2164 ns** | **0.0058 ns** | **0.0045 ns** |  **1.00** |    **0.00** |
 |                   |               |               |            |           |           |       |         |
 | Scenario4_toArray | .NET Core 3.1 | .NET Core 3.1 |  0.4812 ns | 0.0082 ns | 0.0064 ns |  0.99 |    0.03 |
 | Scenario4_toArray | .NET Core 5.0 | .NET Core 5.0 |  0.4856 ns | 0.0119 ns | 0.0111 ns |  1.00 |    0.00 |
