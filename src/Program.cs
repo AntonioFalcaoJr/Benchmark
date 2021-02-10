@@ -13,46 +13,71 @@ namespace Benchmark
             => BenchmarkRunner.Run<Scenarios>();
     }
 
-    [SimpleJob(RuntimeMoniker.NetCoreApp50)]
+    [SimpleJob(RuntimeMoniker.NetCoreApp50, baseline: true)]
+    [SimpleJob(RuntimeMoniker.NetCoreApp31)]
     [RPlotExporter]
     public class Scenarios
     {
-        private static IEnumerable<Guid> Ids
-            => default;
+        private IEnumerable<Guid> _ids;
+        
+        [GlobalSetup]
+        public void Setup()
+            => _ids = null;
 
         [Benchmark]
         public void Scenario1()
         {
-            var list = Ids?.ToList() ?? new List<Guid>();
+            var list = _ids?.ToList() ?? new List<Guid>();
             if (list.Any() is false) { }
         }
 
         [Benchmark]
         public void Scenario2()
         {
-            var list = Ids?.ToArray() ?? Array.Empty<Guid>();
+            var list = _ids?.ToArray() ?? Array.Empty<Guid>();
             if (list.Any() is false) { }
         }
 
         [Benchmark]
-        public void Scenario3()
+        public void Scenario3_toList()
         {
-            var list = Ids?.ToList();
+            var list = _ids?.ToList();
+            if (list is null || list.Any() is false) { }
+        }
+        
+        [Benchmark]
+        public void Scenario3_toArray()
+        {
+            var list = _ids?.ToArray();
             if (list is null || list.Any() is false) { }
         }
 
         [Benchmark]
-        public void Scenario4()
+        public void Scenario4_toList()
         {
-            var list = Ids?.ToList();
+            var list = _ids?.ToList();
             if (list is {Count: > 0} is false) { }
+        }
+        
+        [Benchmark]
+        public void Scenario4_toArray()
+        {
+            var list = _ids?.ToArray();
+            if (list is {Length: > 0} is false) { }
         }
 
         [Benchmark]
-        public void Scenario5()
+        public void Scenario5_toList()
         {
-            var list = Ids?.ToList();
+            var list = _ids?.ToList();
             if (list?.Count <= 0) { }
+        }
+        
+        [Benchmark]
+        public void Scenario5_toArray()
+        {
+            var list = _ids?.ToArray();
+            if (list?.Length <= 0) { }
         }
     }
 }
