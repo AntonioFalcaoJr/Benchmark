@@ -2,7 +2,7 @@
 
 Sometimes, you just need to check whether a collection is empty or null to skip execution. But how expensive is that?
 
-This very simple benchmark tested some ways to do this:
+This simple benchmark tested some ways to do this:
 
 ## Scenarios
 
