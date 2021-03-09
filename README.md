@@ -8,14 +8,19 @@ This simple benchmark tested some ways to do this:
 
 ```c#
 // SCENARIO 1
+
     var list = Ids?.ToList() ?? new List<Guid>();
     if (list.Any() is false) { }
 
+
 // SCENARIO 2
+
     var list = Ids?.ToArray() ?? Array.Empty<Guid>();
     if (list.Any() is false) { }
 
+
 // SCENARIO 3
+
     // toList(); 
     var list = _ids?.ToList();
     if (list is null || list.Any() is false) { }
@@ -23,7 +28,9 @@ This simple benchmark tested some ways to do this:
     var list = _ids?.ToArray();
     if (list is null || list.Any() is false) { }
 
+
 // SCENARIO 4
+
     // toList();
     var list = Ids?.ToList();
     if (list is {Count: > 0} is false) { }
@@ -31,7 +38,9 @@ This simple benchmark tested some ways to do this:
     var list = _ids?.ToArray();
     if (list is {Length: > 0} is false) { }
 
+
 // SCENARIO 5
+
     // toList();
     var list = _ids?.ToList();
     if (list is not {Count: > 0}) { }
@@ -39,7 +48,9 @@ This simple benchmark tested some ways to do this:
     var list = _ids?.ToArray();
     if (list is not {Length: > 0}) { }
 
+
 // SCENARIO 6
+
     // toList();
     var list = Ids?.ToList();
     if (list?.Count <= 0) { }
