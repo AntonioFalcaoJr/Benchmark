@@ -70,11 +70,25 @@ namespace Benchmark
         public void Scenario5_toList()
         {
             var list = _ids?.ToList();
+            if (list is not {Count: > 0}) { }
+        }
+
+        [Benchmark]
+        public void Scenario5_toArray()
+        {
+            var list = _ids?.ToArray();
+            if (list is not {Length: > 0}) { }
+        }
+
+        [Benchmark]
+        public void Scenario6_toList()
+        {
+            var list = _ids?.ToList();
             if (list?.Count <= 0) { }
         }
         
         [Benchmark]
-        public void Scenario5_toArray()
+        public void Scenario6_toArray()
         {
             var list = _ids?.ToArray();
             if (list?.Length <= 0) { }
