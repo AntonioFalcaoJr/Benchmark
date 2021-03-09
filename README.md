@@ -63,29 +63,38 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
 |         Scenario1 | .NET Core 3.1 | 22.2840 ns | 0.2214 ns | 0.2071 ns |  2.55 |    0.04 |
 |         Scenario1 | .NET Core 5.0 |  8.7312 ns | 0.1323 ns | 0.1238 ns |  1.00 |    0.00 |
 |                   |               |            |           |           |       |         |
+|                   |               |            |           |           |       |         |
 |         Scenario2 | .NET Core 3.1 |  7.7519 ns | 0.1216 ns | 0.1078 ns |  0.90 |    0.01 |
 |         Scenario2 | .NET Core 5.0 |  8.5893 ns | 0.0382 ns | 0.0357 ns |  1.00 |    0.00 |
+|                   |               |            |           |           |       |         |
 |                   |               |            |           |           |       |         |
 |  Scenario3_toList | .NET Core 3.1 |  0.5135 ns | 0.0123 ns | 0.0115 ns |  1.01 |    0.03 |
 |  Scenario3_toList | .NET Core 5.0 |  0.5075 ns | 0.0134 ns | 0.0105 ns |  1.00 |    0.00 |
 |                   |               |            |           |           |       |         |
+|                   |               |            |           |           |       |         |
 | Scenario3_toArray | .NET Core 3.1 |  0.5193 ns | 0.0127 ns | 0.0119 ns |  0.64 |    0.03 |
 | Scenario3_toArray | .NET Core 5.0 |  0.8007 ns | 0.0188 ns | 0.0293 ns |  1.00 |    0.00 |
+|                   |               |            |           |           |       |         |
 |                   |               |            |           |           |       |         |
 |  Scenario4_toList | .NET Core 3.1 |  0.2388 ns | 0.0053 ns | 0.0049 ns |  0.85 |    0.05 |
 |  Scenario4_toList | .NET Core 5.0 |  0.2836 ns | 0.0185 ns | 0.0155 ns |  1.00 |    0.00 |
 |                   |               |            |           |           |       |         |
+|                   |               |            |           |           |       |         |
 | Scenario4_toArray | .NET Core 3.1 |  0.4935 ns | 0.0115 ns | 0.0102 ns |  0.98 |    0.02 |
 | Scenario4_toArray | .NET Core 5.0 |  0.5018 ns | 0.0090 ns | 0.0075 ns |  1.00 |    0.00 |
+|                   |               |            |           |           |       |         |
 |                   |               |            |           |           |       |         |
 |  Scenario5_toList | .NET Core 3.1 |  0.2488 ns | 0.0094 ns | 0.0079 ns |  1.80 |    0.19 |
 |  **Scenario5_toList** | **.NET Core 5.0** |  **0.1400 ns** | **0.0149 ns** | **0.0132 ns** |  **1.00** |    **0.00** |
 |                   |               |            |           |           |       |         |
+|                   |               |            |           |           |       |         |
 | Scenario5_toArray | .NET Core 3.1 |  0.5848 ns | 0.0342 ns | 0.0320 ns |  0.83 |    0.05 |
 | Scenario5_toArray | .NET Core 5.0 |  0.7082 ns | 0.0160 ns | 0.0142 ns |  1.00 |    0.00 |
 |                   |               |            |           |           |       |         |
+|                   |               |            |           |           |       |         |
 |  Scenario6_toList | .NET Core 3.1 |  0.2231 ns | 0.0071 ns | 0.0066 ns |  0.98 |    0.06 |
 |  Scenario6_toList | .NET Core 5.0 |  0.2282 ns | 0.0110 ns | 0.0103 ns |  1.00 |    0.00 |
+|                   |               |            |           |           |       |         |
 |                   |               |            |           |           |       |         |
 | Scenario6_toArray | .NET Core 3.1 |  0.6167 ns | 0.0390 ns | 0.0365 ns |  1.12 |    0.10 |
 | Scenario6_toArray | .NET Core 5.0 |  0.5741 ns | 0.0386 ns | 0.0516 ns |  1.00 |    0.00 |
